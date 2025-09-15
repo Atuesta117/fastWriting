@@ -5,11 +5,18 @@ public class GameModel {
     private int time;
     private boolean isPlaying;
     private Phrases phrases = new Phrases();
-
+    private int failures ;
+    private int success;
+    private int remainingTime;
     public GameModel() {
         this.level = 1;
         this.isPlaying = false;
         this.phrases = new Phrases();
+        isPlaying = false;
+        time = 20;
+        this.failures = 0;
+        this.success = 0;
+        this.remainingTime = 0;
     }
     public boolean isInputIsCorrect(String input) {
         return phrases.getLevelList(level).contains(input);
@@ -17,18 +24,37 @@ public class GameModel {
     }
     public void startGame(){
         isPlaying = true;
-        time = 20;
     }
     public void levelUp() {
         level++;
+        success++;
         if(level%5==0){
             time = time - 2;
+
         }
+
+
     }
     public boolean getIsPlaying() {
         return isPlaying;
     }
     public int getLevel() {return level;}
+    public int getTime() {return time;}
 
+
+
+    public boolean isGameOver(){
+        isPlaying = false;
+        return isPlaying;
+    }
+    public void countFailures(){
+        failures++;
+    }
+
+    public void setRemainingTime(int time) {
+        this.remainingTime = time;
+    }
 
 }
+
+

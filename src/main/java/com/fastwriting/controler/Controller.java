@@ -11,8 +11,12 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.image.Image;
+
+import java.util.Objects;
 
 public class Controller {
+    public Controller() {}
     private GameModel gameModel = new GameModel();
     private Phrases phrases = new Phrases();
     private String userInput;
@@ -30,16 +34,33 @@ public class Controller {
     private TextField myInput;
 
     @FXML
+    private Label myTimer;
+
+    @FXML
+    private ImageView imageValidator;
+
+
+
+    @FXML
     private void initialize() {
-        // ✅ INICIALIZAR con una frase al empezar
+        printLevel();
         printPhrase();
+        startTimer();
+        gameModel.startGame();
+
+
     }
 
-    void printPhrase(){
+
+    void printPhrase() {
         String phrase = phrases.getPhrase(gameModel.getLevel());
         // ✅ ¿Qué Label quieres usar? labelLevel o labelPhrases?
         labelPhrases.setText(phrase);  // ← Cambié a labelPhrases
-        System.out.println("Frase actual: " + phrase+ gameModel.getLevel());  // ✅ Debug en consola
+        System.out.println("Frase actual: " + phrase + gameModel.getLevel());  // ✅ Debug en consola
+    }
+    void printLevel() {
+        int level = gameModel.getLevel();
+        labelLevel.setText(Integer.toString(level));
     }
 
     @FXML
@@ -54,17 +75,21 @@ public class Controller {
     @FXML
     void validateInput() {  // ✅ Recibir input como parámetro
         if (gameModel.isInputIsCorrect(userInput)) {
+            stopTImer();
             gameModel.levelUp();
+            startTimer();
             labelMessage.setText("¡That's correct! 🎉 ");
+
             labelMessage.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
             inputIsCorrect = true;
             System.out.println(inputIsCorrect);
-            printPhrase();  // ✅ ¡AHORA SÍ se llama!
-        }
-        else {
+            printPhrase();
+            printLevel();
+        } else {
             labelMessage.setText("You fail 😕 try again");
             labelMessage.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
             inputIsCorrect = false;
+
             System.out.println(inputIsCorrect);
         }
     }
@@ -72,13 +97,50 @@ public class Controller {
     @FXML
     void detectKey(KeyEvent eventT) {
         KeyCode key = eventT.getCode();
+        labelMessage.setStyle("-fx-text-fill: black; -fx-font-weight: bold;");
         labelMessage.setText(key.toString());
 
         // ✅ También validar con Enter directamente aquí
         if (key == KeyCode.ENTER) {
-
             validateInput();
             myInput.clear();
         }
     }
+
+    private Timeline timeline;
+    @FXML
+    private void startTimer() {
+
+        int time = gameModel.getTime();
+        myTimer.setText(String.valueOf(time));
+
+
+        timeline = new Timeline(
+                new KeyFrame(Duration.seconds(1), event -> {
+
+                    int actualTime = Integer.parseInt(myTimer.getText()) - 1;
+                    gameModel.setRemainingTime(actualTime);
+                    myTimer.setText(String.valueOf(actualTime));
+
+
+                    if (actualTime == 0) {
+                        System.out.println("hola?????");
+                        timeline.stop();
+                        myTimer.setText("0");
+                        labelMessage.setText("Time is OUT, GAME OVER");
+                        myInput.setDisable(true);
+                    }
+                })
+        );
+
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+    }
+
+    private void stopTImer() {
+        timeline.stop();
+    }
+
 }
+
+
