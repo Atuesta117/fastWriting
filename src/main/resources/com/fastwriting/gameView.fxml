@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fastwriting.controler.Controller">
+   <children>
+      <Pane prefHeight="477.0" prefWidth="951.0" style="-fx-background-color: #ECF0F1;">
+         <children>
+            <Label fx:id="labelLevel" alignment="CENTER" layoutX="222.0" layoutY="25.0" prefHeight="100.0" prefWidth="522.0" text="AQUI SE INDICA NIVEL" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelMessage" alignment="CENTER" layoutX="257.0" layoutY="295.0" prefHeight="67.0" prefWidth="422.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="myInput" layoutX="208.0" layoutY="385.0" onAction="#enter" onKeyPressed="#detectKey" prefHeight="26.0" prefWidth="499.0" />
+            <Label fx:id="labelPhrases" alignment="CENTER" layoutX="74.0" layoutY="125.0" prefHeight="152.0" prefWidth="788.0" text="FRASES" textFill="#513c3c" />
+            <ImageView fx:id="myImage" fitHeight="32.0" fitWidth="40.0" layoutX="724.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane prefHeight="85.0" prefWidth="1004.0" style="-fx-background-color: #fffff;">
+         <children>
+            <ImageView fx:id="myImageTimer" fitHeight="59.0" fitWidth="66.0" layoutX="845.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/timer.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="myTimer" alignment="CENTER" layoutX="764.0" layoutY="12.0" prefHeight="59.0" prefWidth="66.0" text="20">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</VBox>
