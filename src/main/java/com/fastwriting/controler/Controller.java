@@ -1,6 +1,8 @@
 package com.fastwriting.controler;
 import com.fastwriting.model.GameModel;
 import com.fastwriting.model.Phrases;
+import com.fastwriting.view.PrincipalWindow;
+import com.fastwriting.view.StartWindow;
 import com.fastwriting.view.StatisticsWindow;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
@@ -16,10 +18,13 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.image.Image;
 
 import java.io.IOException;
+import java.security.Principal;
 import java.util.Objects;
+import java.util.SplittableRandom;
 
 public class Controller {
-    public Controller() {}
+
+
     private GameModel gameModel = new GameModel();
     private Phrases phrases = new Phrases();
     private StatisticsWindow statisticsWindow;
@@ -55,7 +60,7 @@ public class Controller {
 
     }
 
-     void mostrarEstadisticas() {
+    void mostrarEstadisticas() {
         try {
             StatisticsWindow statsWindow = new StatisticsWindow(gameModel);
             statsWindow.show(); // Mostrar la ventana
@@ -168,5 +173,3 @@ public class Controller {
 
 
 }
-
-
