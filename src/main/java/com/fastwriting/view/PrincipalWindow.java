@@ -1,11 +1,14 @@
 package com.fastwriting.view;
 
+import com.fastwriting.controler.Controller;
+import com.fastwriting.controler.StatisticsController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
 
 public class PrincipalWindow extends Stage {
 
@@ -20,5 +23,7 @@ public class PrincipalWindow extends Stage {
         this.setScene(scene);
         this.setTitle("FastWriting");
         this.setResizable(false); // this is for dont resize
+        StatisticsController controller = new StatisticsController();
+        controller.setPrincipalWindow(this);
     }
 }

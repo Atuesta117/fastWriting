@@ -1,5 +1,6 @@
 package com.fastwriting.view;
 
+import com.fastwriting.controler.StartController;
 import com.fastwriting.controler.StatisticsController;
 import com.fastwriting.model.GameModel;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +21,8 @@ public class StatisticsWindow extends Stage {
                     getClass().getResource("/com/fastwriting/statisticsWindow.fxml")); // ✅ Usar getClass()
 
             Parent root = loader.load();
-            StatisticsController controller = new StatisticsController();
-            controller = loader.getController();
+            StatisticsController controller = loader.getController();
+            controller.setStatisticWindow(this);
 
 
             controller.showStatistics(gameModel);
