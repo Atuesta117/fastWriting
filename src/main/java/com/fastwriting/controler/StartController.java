@@ -5,9 +5,12 @@ import com.fastwriting.view.StartWindow;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import java.security.Principal;
+
 public class StartController {
     @FXML
     private StartWindow startWindow;
+    private PrincipalWindow principal;
     public void setStartWindow(StartWindow startWindow) {
         this.startWindow = startWindow;
     }
@@ -18,12 +21,15 @@ public class StartController {
     private void handleStartButton() {
         try {
             startWindow.close();
-            PrincipalWindow principal = new PrincipalWindow();
+            this.principal = new PrincipalWindow();
             principal.show();
 
 
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+
     }
+
+
 }
