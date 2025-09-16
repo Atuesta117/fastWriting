@@ -1,6 +1,8 @@
 package com.fastwriting.controler;
 import com.fastwriting.model.GameModel;
 import com.fastwriting.model.Phrases;
+import com.fastwriting.view.StatisticsWindow;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,12 +15,14 @@ import javafx.util.Duration;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.image.Image;
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class Controller {
     public Controller() {}
     private GameModel gameModel = new GameModel();
     private Phrases phrases = new Phrases();
+    private StatisticsWindow statisticsWindow;
     private String userInput;
     private boolean inputIsCorrect = true;
     @FXML
@@ -51,6 +55,16 @@ public class Controller {
 
     }
 
+     void mostrarEstadisticas() {
+        try {
+            StatisticsWindow statsWindow = new StatisticsWindow(gameModel);
+            statsWindow.show(); // Mostrar la ventana
+        } catch (IOException e) {
+            System.err.println("Error abriendo ventana de estadísticas: " + e.getMessage());
+        }
+
+    }
+
 
     void printPhrase() {
         String phrase = phrases.getPhrase(gameModel.getLevel());
@@ -60,7 +74,7 @@ public class Controller {
     }
     void printLevel() {
         int level = gameModel.getLevel();
-        labelLevel.setText(Integer.toString(level));
+        labelLevel.setText("Level: " +Integer.toString(level));
     }
 
     @FXML
@@ -73,7 +87,7 @@ public class Controller {
     }
 
     @FXML
-    void validateInput() {  // ✅ Recibir input como parámetro
+    void validateInput()  {  // ✅ Recibir input como parámetro
         if (gameModel.isInputIsCorrect(userInput)) {
             stopTImer();
             gameModel.levelUp();
@@ -89,13 +103,14 @@ public class Controller {
             labelMessage.setText("You fail 😕 try again");
             labelMessage.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
             inputIsCorrect = false;
+            gameModel.countFailures();
 
             System.out.println(inputIsCorrect);
         }
     }
 
     @FXML
-    void detectKey(KeyEvent eventT) {
+    void detectKey(KeyEvent eventT)throws IOException {
         KeyCode key = eventT.getCode();
         labelMessage.setStyle("-fx-text-fill: black; -fx-font-weight: bold;");
         labelMessage.setText(key.toString());
@@ -109,7 +124,7 @@ public class Controller {
 
     private Timeline timeline;
     @FXML
-    private void startTimer() {
+    private void startTimer(){
 
         int time = gameModel.getTime();
         myTimer.setText(String.valueOf(time));
@@ -124,11 +139,20 @@ public class Controller {
 
 
                     if (actualTime == 0) {
+
                         System.out.println("hola?????");
                         timeline.stop();
                         myTimer.setText("0");
                         labelMessage.setText("Time is OUT, GAME OVER");
                         myInput.setDisable(true);
+                        mostrarEstadisticas();
+
+                    } else if (gameModel.getPlayerIsWin()) {
+                        timeline.stop();
+                        labelMessage.setText("YOU WIN, GAME OVER");
+                        myInput.setDisable(true);
+                        mostrarEstadisticas();
+
                     }
                 })
         );
@@ -140,6 +164,8 @@ public class Controller {
     private void stopTImer() {
         timeline.stop();
     }
+
+
 
 }
 
