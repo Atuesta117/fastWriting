@@ -26,8 +26,8 @@
                 <TextField fx:id="myInput" layoutX="220.0" layoutY="384.0" onAction="#enter" onKeyPressed="#detectKey" prefHeight="29.0" prefWidth="481.0" />
                 <Label fx:id="labelPhrases" alignment="CENTER" layoutX="79.0" layoutY="171.0" prefHeight="71.0" prefWidth="780.0" text="FRASES" />
                 <ImageView fx:id="imageValidator" fitHeight="32.0" fitWidth="40.0" layoutX="724.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true" />
-                <Button fx:id="closeGame" layoutX="175.0" layoutY="475.0" mnemonicParsing="false" onAction="#closeGame" prefHeight="39.0" prefWidth="89.0" styleClass="heavy-metal-button" text="Close" />
-                <Button fx:id="playAgain" layoutX="26.0" layoutY="475.0" onAction="#playAgain" prefHeight="39.0" prefWidth="104.0" styleClass="heavy-metal-button" text="Play Again" />
+                <Button fx:id="closeGame" layoutX="187.0" layoutY="475.0" mnemonicParsing="false" onAction="#closeGame" prefHeight="39.0" prefWidth="89.0" styleClass="heavy-metal-button" text="Close" />
+                <Button fx:id="playAgain" layoutX="26.0" layoutY="475.0" onAction="#playAgain" prefHeight="39.0" prefWidth="125.0" styleClass="heavy-metal-button" text="Play Again" />
                 <ImageView fx:id="myImageTimer" fitHeight="59.0" fitWidth="66.0" layoutX="838.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@images/timer.png" />

@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="511.0" styleClass="pane" stylesheets="@CSS/statistic.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fastwriting.controler.StatisticsController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="513.0" styleClass="pane" stylesheets="@CSS/statistic.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fastwriting.controler.StatisticsController">
     <children>
-        <Label fx:id="label" alignment="CENTER" layoutX="90.0" layoutY="40.0" prefHeight="48.0" prefWidth="342.0" text="inserte texto xd">
+        <Label fx:id="labelLevel" alignment="CENTER" layoutX="85.0" layoutY="26.0" prefHeight="48.0" prefWidth="342.0" stylesheets="@CSS/style.css" text="inserte texto xd">
             <font>
                 <Font size="28.0" />
             </font>
@@ -45,9 +45,9 @@
                 <Image url="@images/timer.png" />
             </image>
         </ImageView>
-        <TextField fx:id="text1" accessibleText="False" alignment="CENTER" editable="false" layoutX="270.0" layoutY="144.0" text="jhkjh" />
+        <TextField fx:id="text1" accessibleText="False" alignment="CENTER" editable="false" layoutX="270.0" layoutY="144.0" />
         <TextField fx:id="text3" alignment="CENTER" editable="false" layoutX="270.0" layoutY="303.0" />
         <TextField fx:id="text2" alignment="CENTER" editable="false" layoutX="270.0" layoutY="223.0" />
-        <Button fx:id="closeGame" layoutX="180.0" layoutY="373.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="139.0" text="Close Game" />
+        <Button fx:id="closeGame" layoutX="155.0" layoutY="398.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="188.0" text="Close Statistic Panel" />
     </children>
 </Pane>

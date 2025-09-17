@@ -31,7 +31,7 @@ public class StatisticsController {
     private Button closeGame;
 
     @FXML
-    private Label label;
+    private Label labelLevel;
 
 
     @FXML
@@ -50,9 +50,9 @@ public class StatisticsController {
         text3.setText(Integer.toString(gameModel.getRemainingTime()));
 
         if (gameModel.getPlayerIsWin()) {
-            label.setText("CONGRATULATIONS, YOU WIN!!!");
+            labelLevel.setText("CONGRATULATIONS, YOU WIN!!!");
         } else {
-            label.setText("GAME OVER");
+            labelLevel.setText("GAME OVER");
         }
     }
 

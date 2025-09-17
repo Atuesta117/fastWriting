@@ -13,6 +13,6 @@
       <Label fx:id="label111" alignment="CENTER" layoutX="108.0" layoutY="294.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="3. If your input is wrong try again" />
       <Label fx:id="label1111" alignment="CENTER" layoutX="108.0" layoutY="350.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="4. Your time is 20 seconds, but every 5 levels the time decreases" />
       <Label fx:id="label11111" alignment="CENTER" layoutX="108.0" layoutY="411.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="5. If the time is runs out, you loose" />
-      <Button fx:id="close" layoutX="48.0" layoutY="30.0" mnemonicParsing="false" onAction="#close" text="Button" />
+      <Button fx:id="close" layoutX="43.0" layoutY="30.0" mnemonicParsing="false" onAction="#close" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="Back" />
    </children>
 </Pane>

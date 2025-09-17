@@ -30,7 +30,7 @@ public class GameModel {
     public void levelUp() {
         level++;
         success++;
-        if(level%5==0){
+        if(level%5==0 && time!=2){
             time = time - 2;
 
         }
