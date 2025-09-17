@@ -1,0 +1,48 @@
+/* Estilos para el Pane (fondo) */
+#rootPane {
+    -fx-background-color: #1a1a1a; /* Un gris muy oscuro */
+    -fx-background-image: url('../metal_texture1.png'); /* Usamos la textura JPG de metal o roca agrietada para el fondo */
+    -fx-background-size: cover; /* Ajusta la imagen para cubrir el fondo */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+/* Estilos para el botón de Heavy Metal (SOLO TEXTO, SIN BORDES) */
+.heavy-metal-button {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    /* QUITAMOS LAS PROPIEDADES DE BORDE */
+    -fx-border-width: 0; /* Ancho del borde a 0 */
+    -fx-border-color: transparent; /* Color del borde a transparente (aunque con width 0 ya no se vería) */
+    -fx-border-radius: 0;
+    -fx-border-style: none; /* Estilo de borde a none */
+
+    /* Sombra para darle un poco de profundidad al texto */
+    -fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.8), 7, 0.0, 0, 3); /* Sombra más pronunciada alrededor del texto */
+
+    /* Texto del botón */
+    -fx-text-fill: #e60000; /* Rojo vibrante */
+    -fx-font-family: "Impact", "Arial Black", sans-serif; /* Fuente gruesa y fuerte */
+    -fx-font-size: 40px; /* Hacemos el texto aún más grande para que sea el foco */
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px; /* Espaciado interno, aunque menos crítico sin bordes */
+}
+
+/* Efecto hover para el botón (solo texto, sin bordes) */
+.heavy-metal-button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ff0000; /* Rojo más brillante en hover */
+    -fx-effect: dropshadow( three-pass-box, rgba(255,0,0,0.9), 10, 0.0, 0, 4); /* Sombra roja más intensa en hover */
+    /* No hay cambios de borde ya que no existen */
+}
+
+/* Efecto presionado para el botón (solo texto, sin bordes) */
+.heavy-metal-button:pressed {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b30000; /* Rojo más oscuro al presionar */
+    -fx-translate-y: 1px; /* Pequeño desplazamiento hacia abajo */
+    -fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 2); /* Sombra más sutil al presionar */
+    /* No hay cambios de borde ya que no existen */
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="992.0" stylesheets="@CSS/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fastwriting.controler.RulesController">
+   <children>
+      <Label alignment="CENTER" layoutX="372.0" layoutY="30.0" prefHeight="95.0" prefWidth="249.0" stylesheets="@CSS/general.css" text="Rules" />
+      <Label fx:id="label1" alignment="CENTER" layoutX="108.0" layoutY="175.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="1. Write the word in the screen" />
+      <Label fx:id="label11" alignment="CENTER" layoutX="108.0" layoutY="233.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="2. Press &quot;Enter&quot; to validate your input" />
+      <Label fx:id="label111" alignment="CENTER" layoutX="108.0" layoutY="294.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="3. If your input is wrong try again" />
+      <Label fx:id="label1111" alignment="CENTER" layoutX="108.0" layoutY="350.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="4. Your time is 20 seconds, but every 5 levels the time decreases" />
+      <Label fx:id="label11111" alignment="CENTER" layoutX="108.0" layoutY="411.0" prefHeight="40.0" prefWidth="758.0" styleClass="heavy-metal-button" stylesheets="@CSS/style.css" text="5. If the time is runs out, you loose" />
+      <Button fx:id="close" layoutX="48.0" layoutY="30.0" mnemonicParsing="false" onAction="#close" text="Button" />
+   </children>
+</Pane>
