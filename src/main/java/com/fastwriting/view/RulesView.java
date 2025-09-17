@@ -9,8 +9,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Represents a JavaFX window that displays the game rules to the user.
+ * This class extends {@link javafx.stage.Stage} and loads the
+ * {@code RulesView.fxml} layout. It is a non-resizable window.
+ */
 public class RulesView extends Stage {
 
+    /**
+     * Constructs a new {@code RulesView}.
+     * This constructor loads the FXML layout for the rules, sets up the scene,
+     * and links the view to its corresponding {@link RulesController}.
+     *
+     * @throws IOException if the {@code RulesView.fxml} file cannot be loaded.
+     */
     public RulesView() throws IOException {
         FXMLLoader loader = new FXMLLoader(
                 StartWindow.class.getResource("/com/fastwriting/RulesView.fxml")
@@ -22,6 +34,5 @@ public class RulesView extends Stage {
         this.setResizable(false);
         RulesController controller = loader.getController();
         controller.setRulesView(this);
-         // ¡Esta línea es crucial!
     }
 }

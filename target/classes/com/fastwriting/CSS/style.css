@@ -98,7 +98,7 @@
 
 #labelPhrases {
     -fx-text-fill: #bfbfbf; /* Gris más claro para las frases */
-    -fx-font-size: 35px;
+    -fx-font-size: 25px;
     -fx-font-weight: bold;
 }
 

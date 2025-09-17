@@ -8,9 +8,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class StartWindow extends Stage{
+/**
+ * Represents the start window of the application, serving as the initial entry point.
+ * This class extends {@link javafx.stage.Stage} and is responsible for
+ * loading the {@code startWindow.fxml} layout, setting up the scene, and linking
+ * it to the {@link StartController}.
+ */
+public class StartWindow extends Stage {
 
-    public StartWindow() throws IOException{
+    /**
+     * Constructs the main {@code StartWindow}.
+     * It loads the FXML file for the start view, creates a scene, and sets the stage properties.
+     * It also initializes the {@link StartController} and passes a reference to this stage.
+     *
+     * @throws IOException if the {@code startWindow.fxml} file cannot be loaded.
+     */
+    public StartWindow() throws IOException {
         FXMLLoader loader = new FXMLLoader(
                 StartWindow.class.getResource("/com/fastwriting/startWindow.fxml")
         );
@@ -20,9 +33,6 @@ public class StartWindow extends Stage{
         this.setTitle("FastWriting");
         this.setResizable(false);
         StartController controller = loader.getController();
-        controller.setStartWindow(this); // ¡Esta línea es crucial!
+        controller.setStartWindow(this);
     }
-
-
-
 }

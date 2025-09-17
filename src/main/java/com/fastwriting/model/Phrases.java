@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * A utility class that stores and manages a collection of phrases
+ * organized by difficulty level.
+ */
 public class Phrases {
 
     // Level 1-5: Basic words (3-4 letters)
@@ -76,14 +80,25 @@ public class Phrases {
     private List<String> level49 = Arrays.asList("psychological", "psychiatric", "neurological", "cognitive", "behavioral", "emotional", "mental", "intellectual", "rational", "logical");
     private List<String> level50 = Arrays.asList("multidisciplinary", "interdisciplinary", "crossdisciplinary", "transdisciplinary", "comprehensive", "holistic", "integrated", "unified", "synthesized", "coordinated");
 
-    // ✅ Method to get a random phrase from a level
+    /**
+     * Retrieves a random phrase from the specified level.
+     *
+     * @param level The difficulty level from which to get the phrase (1-50).
+     * @return A randomly selected {@link String} phrase from the corresponding level list.
+     */
     public String getPhrase(int level) {
         Random rand = new Random();
         List<String> phrases = getLevelList(level);
         return phrases.get(rand.nextInt(phrases.size()));
     }
 
-    // ✅ Method to get a full list by level
+    /**
+     * Retrieves the complete list of phrases for a given level.
+     *
+     * @param level The difficulty level for which to retrieve the list (1-50).
+     * @return A {@link List} of {@link String} containing all phrases for the specified level.
+     * @throws IllegalArgumentException if the provided level is not within the valid range (1-50).
+     */
     public List<String> getLevelList(int level) {
         switch (level) {
             case 1:
@@ -190,5 +205,4 @@ public class Phrases {
                 throw new IllegalArgumentException("Invalid level: " + level);
         }
     }
-
 }

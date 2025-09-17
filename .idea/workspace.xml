@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="" />
+    <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/RulesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/RulesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/Phrases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/Phrases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/PrincipalWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/PrincipalWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/RulesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/RulesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StatisticsWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StatisticsWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/gameView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/gameView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/RulesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/RulesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/gameView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/gameView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/model/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/model/GameModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/model/Phrases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/model/Phrases.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StatisticsWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StatisticsWindow.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +86,7 @@
       <updated>1758079428363</updated>
       <workItem from="1758079429987" duration="991000" />
       <workItem from="1758080536776" duration="610000" />
+      <workItem from="1758110669988" duration="3189000" />
     </task>
     <servers />
   </component>
