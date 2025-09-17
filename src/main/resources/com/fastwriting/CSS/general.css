@@ -1,0 +1,41 @@
+.pane {
+    -fx-background-image: url("../images/validate.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+.label{
+{
+    -fx-text-fill: #e60000; /* Rojo vibrante para el texto del nivel */
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+
+    /* Fondo metálico para el nivel */
+    -fx-background-color:
+            linear-gradient(to bottom, #6b6b6b, #4a4a4a); /* Degradado metálico */
+    -fx-background-radius: 10; /* Ligeramente redondeado */
+    -fx-border-color: #8c0000; /* Borde rojo oscuro */
+    -fx-border-width: 3px; /* Borde más grueso */
+    -fx-border-radius: 10;
+
+    /* Sombra para resaltar */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0.0, 0, 3);
+
+    /* Padding para dar espacio al texto dentro del "placa" */
+    -fx-padding: 10px 20px;
+
+    /* Para las púas, usaremos un efecto de borde o imagen de fondo (más complejo)
+       Para simular púas con CSS puro, es muy limitado. Podríamos usar múltiples bordes
+       o pseudo-elementos, pero eso no es directamente compatible con JavaFX CSS.
+       La mejor opción sería una imagen de fondo con púas para este Label,
+       o incrustar la imagen directamente en el FXML si es un adorno fijo.
+       Por ahora, intensificamos el borde y la sombra para un aspecto "duro".
+       Si quieres púas *literales*, necesitaríamos una imagen para el fondo de este Label.
+    */
+}
+}
+#label1 {
+    -fx-text-fill: #bfbfbf; /* Gris más claro para las frases */
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+}
