@@ -23,7 +23,8 @@ public class PrincipalWindow extends Stage {
         this.setScene(scene);
         this.setTitle("FastWriting");
         this.setResizable(false); // this is for dont resize
-        StatisticsController controller = new StatisticsController();
+        Controller controller = fxmlLoader.getController();
         controller.setPrincipalWindow(this);
+
     }
 }

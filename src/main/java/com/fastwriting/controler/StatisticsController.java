@@ -16,17 +16,17 @@ import java.io.IOException;
 public class StatisticsController {
     @FXML
     private StatisticsWindow window;
-    @FXML
-    private PrincipalWindow principalWindow;
-    public void setPrincipalWindow(PrincipalWindow principalWindow) {
-        this.principalWindow = principalWindow;
-    }
+
+
     public void setStatisticWindow(StatisticsWindow window) {
-    this.window =  window;
+        this.window = window;
 
     }
+
     @FXML
-    private void initialize() {}
+    private void initialize() {
+    }
+
     @FXML
     private Button closeGame;
 
@@ -42,34 +42,24 @@ public class StatisticsController {
 
     @FXML
     private TextField text3;
+
     @FXML
-    public void showStatistics(GameModel gameModel){
+    public void showStatistics(GameModel gameModel) {
         text1.setText(Integer.toString(gameModel.getSuccess()));
         text2.setText(Integer.toString(gameModel.getFailures()));
         text3.setText(Integer.toString(gameModel.getRemainingTime()));
 
-        if(gameModel.getPlayerIsWin()){
+        if (gameModel.getPlayerIsWin()) {
             label.setText("CONGRATULATIONS, YOU WIN!!!");
-        }
-        else{
+        } else {
             label.setText("GAME OVER");
         }
     }
+
     @FXML
-    void  closeWindow(ActionEvent event) throws IOException {
-        if(window!=null){
+    void closeWindow(ActionEvent event) throws IOException {
+        if (window != null) {
             window.close();
         }
     }
-    @FXML
-    private Button playAgain;
-
-    @FXML
-    void playAgainAction(ActionEvent event) throws IOException {
-        principalWindow.close();
-        window.close();
-        PrincipalWindow newWindow = new PrincipalWindow();
-        newWindow.show();
-    }
-
 }

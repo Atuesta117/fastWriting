@@ -13,7 +13,7 @@ public class GameModel {
         this.level = 1;
         this.isPlaying = false;
         this.phrases = new Phrases();
-        isPlaying = false;
+        isPlaying = true;
         time = 20;
         this.failures = 0;
         this.success = 0;
@@ -39,6 +39,10 @@ public class GameModel {
     }
     public boolean getIsPlaying() {
         return isPlaying;
+    }
+    public void setIsPlaying(boolean isPlaying) {
+        this.isPlaying = isPlaying;
+
     }
     public int getLevel() {return level;}
     public int getTime() {return time;}

@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.image.Image;
@@ -23,8 +24,11 @@ import java.util.Objects;
 import java.util.SplittableRandom;
 
 public class Controller {
-
-
+    @FXML
+    private PrincipalWindow principalWindow;
+    public void setPrincipalWindow(PrincipalWindow principalWindow) {
+        this.principalWindow = principalWindow;
+    }
     private GameModel gameModel = new GameModel();
     private Phrases phrases = new Phrases();
     private StatisticsWindow statisticsWindow;
@@ -48,7 +52,15 @@ public class Controller {
     @FXML
     private ImageView imageValidator;
 
+    @FXML
+    private Button playAgain;
 
+    @FXML
+    private Button closeGame;
+    @FXML
+    private void closeGame(ActionEvent event) {
+        principalWindow.close();
+    }
 
     @FXML
     private void initialize() {
@@ -56,9 +68,11 @@ public class Controller {
         printPhrase();
         startTimer();
         gameModel.startGame();
+        playAgain.setDisable(true);
 
 
     }
+
 
     void mostrarEstadisticas() {
         try {
@@ -97,16 +111,15 @@ public class Controller {
             stopTImer();
             gameModel.levelUp();
             startTimer();
-            labelMessage.setText("¡That's correct! 🎉 ");
-
-            labelMessage.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
+            labelMessage.setText("      ¡That's correct! 🎉 ");
+            labelMessage.setStyle("\"-fx-text-fill: #3ed0c6; ");
             inputIsCorrect = true;
             System.out.println(inputIsCorrect);
             printPhrase();
             printLevel();
         } else {
-            labelMessage.setText("You fail 😕 try again");
-            labelMessage.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
+            labelMessage.setText("   You fail 😕 try again");
+          labelMessage.setStyle("\"-fx-text-fill: #ff0000;");
             inputIsCorrect = false;
             gameModel.countFailures();
 
@@ -146,6 +159,8 @@ public class Controller {
                     if (actualTime == 0) {
 
                         System.out.println("hola?????");
+                        playAgain.setDisable(false);
+                        gameModel.setIsPlaying(false);
                         timeline.stop();
                         myTimer.setText("0");
                         labelMessage.setText("Time is OUT, GAME OVER");
@@ -153,6 +168,8 @@ public class Controller {
                         mostrarEstadisticas();
 
                     } else if (gameModel.getPlayerIsWin()) {
+                        playAgain.setDisable(false);
+                        gameModel.setIsPlaying(false);
                         timeline.stop();
                         labelMessage.setText("YOU WIN, GAME OVER");
                         myInput.setDisable(true);
@@ -171,5 +188,19 @@ public class Controller {
     }
 
 
+    @FXML
+    void playAgain(ActionEvent event) {
+        if(!gameModel.getIsPlaying()){
+            principalWindow.close();
+            PrincipalWindow newPrincipalWindow;
+            try {
+                newPrincipalWindow = new PrincipalWindow();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            newPrincipalWindow.show();
+        }
+
+    }
 
 }

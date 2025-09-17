@@ -1,6 +1,7 @@
 package com.fastwriting.controler;
 
 import com.fastwriting.view.PrincipalWindow;
+import com.fastwriting.view.RulesView;
 import com.fastwriting.view.StartWindow;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,16 @@ public class StartController {
     @FXML
     private StartWindow startWindow;
     private PrincipalWindow principal;
+    private RulesView rulesView;
+
+    {
+        try {
+            rulesView = new RulesView();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public void setStartWindow(StartWindow startWindow) {
         this.startWindow = startWindow;
     }
@@ -32,5 +43,16 @@ public class StartController {
 
     }
 
+    @FXML
+    Button rules;
+
+    @FXML
+    void rules(ActionEvent event) {
+        rulesView.show();
+
+    }
+
 
 }
+
+
