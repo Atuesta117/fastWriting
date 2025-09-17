@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/statisticsWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/statisticsWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/RulesView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/RulesView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/statisticsWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/statisticsWindow.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
