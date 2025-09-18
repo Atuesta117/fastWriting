@@ -4,7 +4,7 @@ package com.fastwriting.model;
  * The model class representing the state of the typing game.
  * It manages game logic such as the current level, time, player's score, and game status.
  */
-public class GameModel {
+public class GameModel implements IGameInterface {
     private int level;
     private int time;
     private boolean isPlaying;
@@ -36,6 +36,7 @@ public class GameModel {
      * @param input The text entered by the user.
      * @return {@code true} if the input is a correct phrase for the current level, {@code false} otherwise.
      */
+    @Override
     public boolean isInputIsCorrect(String input) {
         return phrases.getLevelList(level).contains(input);
     }
@@ -43,6 +44,7 @@ public class GameModel {
     /**
      * Starts the game session by setting the game status to playing.
      */
+    @Override
     public void startGame() {
         isPlaying = true;
     }
@@ -51,6 +53,7 @@ public class GameModel {
      * Advances the game to the next level.
      * It increments the level and the success count. Every 5 levels, it decreases the available time by 2 seconds.
      */
+    @Override
     public void levelUp() {
         level++;
         success++;
@@ -64,6 +67,7 @@ public class GameModel {
      *
      * @return {@code true} if the game is currently running, {@code false} otherwise.
      */
+    @Override
     public boolean getIsPlaying() {
         return isPlaying;
     }
@@ -73,6 +77,7 @@ public class GameModel {
      *
      * @param isPlaying A boolean value to set the game's playing state.
      */
+    @Override
     public void setIsPlaying(boolean isPlaying) {
         this.isPlaying = isPlaying;
     }
@@ -82,6 +87,7 @@ public class GameModel {
      *
      * @return The current level as an integer.
      */
+    @Override
     public int getLevel() {
         return level;
     }
@@ -91,6 +97,7 @@ public class GameModel {
      *
      * @return The time limit as an integer.
      */
+    @Override
     public int getTime() {
         return time;
     }
@@ -98,6 +105,7 @@ public class GameModel {
     /**
      * Increments the failure count by one.
      */
+    @Override
     public void countFailures() {
         failures++;
     }
@@ -107,6 +115,7 @@ public class GameModel {
      *
      * @param time The remaining time in seconds.
      */
+    @Override
     public void setRemainingTime(int time) {
         this.remainingTime = time;
     }
@@ -116,6 +125,7 @@ public class GameModel {
      *
      * @return The number of failures as an integer.
      */
+    @Override
     public int getFailures() {
         return failures;
     }
@@ -125,6 +135,7 @@ public class GameModel {
      *
      * @return The number of successes as an integer.
      */
+    @Override
     public int getSuccess() {
         return success;
     }
@@ -134,6 +145,7 @@ public class GameModel {
      *
      * @return The remaining time in seconds.
      */
+    @Override
     public int getRemainingTime() {
         return remainingTime;
     }
@@ -143,6 +155,7 @@ public class GameModel {
      *
      * @return {@code true} if the player has won, {@code false} otherwise.
      */
+    @Override
     public boolean getPlayerIsWin() {
         if (level > 41) {
             playerIsWin = true;
