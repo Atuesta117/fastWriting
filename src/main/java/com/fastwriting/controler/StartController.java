@@ -48,7 +48,9 @@ public class StartController {
      * It closes the current start window and opens the main game window ({@link PrincipalWindow}).
      */
     @FXML
-    private void handleStartButton() {
+    Button startButon;
+    @FXML
+    private void handleStartButton(ActionEvent event) {
         try {
             startWindow.close();
             this.principal = new PrincipalWindow();

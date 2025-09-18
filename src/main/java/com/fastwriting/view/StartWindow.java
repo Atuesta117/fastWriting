@@ -32,6 +32,7 @@ public class StartWindow extends Stage {
         this.setScene(scene);
         this.setTitle("FastWriting");
         this.setResizable(false);
+
         StartController controller = loader.getController();
         controller.setStartWindow(this);
     }
