@@ -49,3 +49,14 @@
 #closeGame:pressed {
     -fx-background-color: #550000;
 }
+
+#playAgain{
+    -fx-background-color: #000000; /* Fondo negro */
+    -fx-text-fill: #FF0000; /* Texto en rojo */
+    -fx-border-color: #FF4500; /* Borde rojo para que destaque */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+}

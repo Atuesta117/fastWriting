@@ -113,3 +113,25 @@
     -fx-font-weight: bold;
     -fx-font-size: 30px;
 }
+/* Estilo para el contenedor general de la barra de progreso */
+.progress-bar {
+    -fx-accent: #FF0000; /* Define el color principal de la barra (el rojo) */
+    -fx-control-inner-background: #000000; /* Color del fondo de la barra, si se usa */
+}
+
+/* Estilo para el fondo (la pista vacía) de la barra */
+.progress-bar .track {
+    -fx-background-color: #000000; /* Fondo negro */
+    -fx-background-radius: 5px; /* Bordes redondeados */
+    -fx-border-color: #333333; /* Un borde gris oscuro para definirla */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+/* Estilo para la barra que se mueve */
+.progress-bar .bar {
+    -fx-background-color: #FF0000; /* Color rojo vibrante */
+    -fx-background-insets: 0;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(two-pass-box, #FF0000, 5, 0.0, 0, 0); /* Un sutil efecto de brillo rojo */
+}

@@ -73,4 +73,11 @@ public class StartController {
     void rules(ActionEvent event) {
         rulesView.show();
     }
+
+    @FXML
+    private Button closeWindow;
+    @FXML
+    void closeWindow(ActionEvent event) {
+            startWindow.close();
+    }
 }

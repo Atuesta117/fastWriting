@@ -20,6 +20,8 @@ import java.io.IOException;
 public class StatisticsController {
     @FXML
     private StatisticsWindow window;
+    @FXML
+    private PrincipalWindow principalWindow;
 
     /**
      * Sets the reference to the {@link StatisticsWindow} this controller manages.
@@ -28,6 +30,10 @@ public class StatisticsController {
      */
     public void setStatisticWindow(StatisticsWindow window) {
         this.window = window;
+    }
+
+    public void setPrincipalWindow(PrincipalWindow principalWindow) {
+        this.principalWindow = principalWindow;
     }
 
     @FXML
@@ -68,16 +74,36 @@ public class StatisticsController {
         }
     }
 
-    /**
-     * Closes the statistics window when the close button is clicked.
-     *
-     * @param event The action event triggered by the button.
-     * @throws IOException if there is an error closing the window.
-     */
+
     @FXML
-    void closeWindow(ActionEvent event) throws IOException {
+    private Button playAgain;
+
+    @FXML
+    void playAgain(ActionEvent event) {
+        principalWindow.close();
+        window.close();
+        PrincipalWindow newPrincipalWindow;
+        try {
+            newPrincipalWindow = new PrincipalWindow();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        newPrincipalWindow.show();
+
+    }
+
+
+
+
+    @FXML
+    Button closeWindow;
+    @FXML
+    private void closeWindow(ActionEvent event) {
         if (window != null) {
             window.close();
         }
+        principalWindow.close();
     }
+
+
 }

@@ -3,6 +3,7 @@ package com.fastwriting;
 import com.fastwriting.view.StartWindow;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
     @Override
@@ -10,6 +11,7 @@ public class Main extends Application {
         StartWindow startWindow = new StartWindow();
         startWindow.show();
     }
+
 
     public static void main(String[] args) {
         launch(args);

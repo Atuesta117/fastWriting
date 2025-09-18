@@ -6,6 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StatisticsWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StatisticsWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/heavy-metal-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/heavy-metal-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/statistic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/statistic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/gameView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/gameView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/startWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/startWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/statisticsWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/statisticsWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/gameView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/gameView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/startWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/startWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/statisticsWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/statisticsWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +95,7 @@
       <workItem from="1758156274546" duration="224000" />
       <workItem from="1758161755471" duration="2277000" />
       <workItem from="1758205265313" duration="39000" />
+      <workItem from="1758208840072" duration="4414000" />
     </task>
     <servers />
   </component>

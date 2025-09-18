@@ -29,7 +29,7 @@ public class StatisticsWindow extends Stage {
      * @param gameModel The {@code GameModel} containing the game session data, which is used to populate the statistics view.
      * @throws IOException If the {@code statisticsWindow.fxml} file cannot be loaded.
      */
-    public StatisticsWindow(GameModel gameModel) throws IOException {
+    public StatisticsWindow(GameModel gameModel, PrincipalWindow principalWindow) throws IOException {
 
         try {
             FXMLLoader loader = new FXMLLoader(
@@ -38,6 +38,7 @@ public class StatisticsWindow extends Stage {
             Parent root = loader.load();
             StatisticsController controller = loader.getController();
             controller.setStatisticWindow(this);
+            controller.setPrincipalWindow(principalWindow);
 
 
             controller.showStatistics(gameModel);

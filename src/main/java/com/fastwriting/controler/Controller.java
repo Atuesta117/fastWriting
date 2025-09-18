@@ -5,7 +5,9 @@ import com.fastwriting.model.Phrases;
 import com.fastwriting.view.PrincipalWindow;
 import com.fastwriting.view.StartWindow;
 import com.fastwriting.view.StatisticsWindow;
+import javafx.animation.KeyValue;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.input.KeyCode;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -68,20 +70,12 @@ public class Controller {
     private ImageView imageValidator;
 
     @FXML
-    private Button playAgain;
+    ProgressBar progressBar;
 
     @FXML
-    private Button closeGame;
+    Button closeGame;
 
-    /**
-     * Closes the main game window.
-     *
-     * @param event The action event triggered by the button.
-     */
-    @FXML
-    private void closeGame(ActionEvent event) {
-        principalWindow.close();
-    }
+
 
     /**
      * Initializes the controller after the FXML has been loaded.
@@ -94,7 +88,7 @@ public class Controller {
         printPhrase();
         startTimer();
         gameModel.startGame();
-        playAgain.setDisable(true);
+
     }
 
     /**
@@ -103,7 +97,7 @@ public class Controller {
      */
     void mostrarEstadisticas() {
         try {
-            StatisticsWindow statsWindow = new StatisticsWindow(gameModel);
+            StatisticsWindow statsWindow = new StatisticsWindow(gameModel, principalWindow);
             statsWindow.show();
         } catch (IOException e) {
             System.err.println("Error opening statistic window: " + e.getMessage());
@@ -190,8 +184,15 @@ public class Controller {
     @FXML
     private void startTimer() {
         int time = gameModel.getTime();
+        progressBar.setProgress(1.0);
         myTimer.setText(String.valueOf(time));
-
+        //create the progres barr animation
+        Timeline progressBarTimeLine = new Timeline(
+                // Animated since 1.0 to 0.0
+                new KeyFrame(Duration.seconds(time), new KeyValue(progressBar.progressProperty(), 0.0))
+        );
+        progressBarTimeLine.setCycleCount(time);
+        progressBarTimeLine.play();
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> {
                     int actualTime = Integer.parseInt(myTimer.getText()) - 1;
@@ -199,17 +200,19 @@ public class Controller {
                     myTimer.setText(String.valueOf(actualTime));
 
                     if (actualTime == 0) {
-                        playAgain.setDisable(false);
+
                         gameModel.setIsPlaying(false);
                         timeline.stop();
+                        progressBarTimeLine.stop();
                         myTimer.setText("0");
                         labelMessage.setText("Time is OUT, GAME OVER");
                         myInput.setDisable(true);
                         mostrarEstadisticas();
                     } else if (gameModel.getPlayerIsWin()) {
-                        playAgain.setDisable(false);
+
                         gameModel.setIsPlaying(false);
                         timeline.stop();
+                        progressBarTimeLine.stop();
                         labelMessage.setText("YOU WIN, GAME OVER");
                         myInput.setDisable(true);
                         mostrarEstadisticas();
@@ -225,25 +228,13 @@ public class Controller {
      */
     private void stopTImer() {
         timeline.stop();
+
     }
 
-    /**
-     * Handles the "Play Again" button action.
-     * It closes the current game window and opens a new one to start a new game.
-     *
-     * @param event The action event triggered by the button.
-     */
     @FXML
-    void playAgain(ActionEvent event) {
-        if (!gameModel.getIsPlaying()) {
-            principalWindow.close();
-            PrincipalWindow newPrincipalWindow;
-            try {
-                newPrincipalWindow = new PrincipalWindow();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            newPrincipalWindow.show();
-        }
+    void closeGame(ActionEvent event) {
+        principalWindow.close();
     }
+
+
 }

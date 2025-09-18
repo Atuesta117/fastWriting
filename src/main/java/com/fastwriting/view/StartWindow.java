@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -27,8 +28,10 @@ public class StartWindow extends Stage {
         FXMLLoader loader = new FXMLLoader(
                 StartWindow.class.getResource("/com/fastwriting/startWindow.fxml")
         );
+
         Parent root = loader.load();
         Scene scene = new Scene(root);
+
         this.setScene(scene);
         this.setTitle("FastWriting");
         this.setResizable(false);
