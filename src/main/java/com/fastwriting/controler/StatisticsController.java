@@ -32,10 +32,21 @@ public class StatisticsController {
         this.window = window;
     }
 
+    /**
+     * Sets the reference to the {@link PrincipalWindow}, which allows this controller
+     * to manage the main game window (e.g., to close it or restart the game).
+     *
+     * @param principalWindow The {@code PrincipalWindow} instance.
+     */
     public void setPrincipalWindow(PrincipalWindow principalWindow) {
         this.principalWindow = principalWindow;
     }
 
+    /**
+     * Initializes the controller after the FXML has been loaded.
+     * This method is called automatically and can be used for initial setup tasks.
+     * At the moment, it doesn't perform any actions.
+     */
     @FXML
     private void initialize() {
         // Method called when the FXML is loaded.
@@ -58,6 +69,8 @@ public class StatisticsController {
 
     /**
      * Populates the statistics window with data from the game model.
+     * This method is called by the main game controller to display the final
+     * results (success, failures, time) and the game outcome.
      *
      * @param gameModel The {@link GameModel} containing the final game statistics.
      */
@@ -78,32 +91,50 @@ public class StatisticsController {
     @FXML
     private Button playAgain;
 
+    /**
+     * Restarts the game by closing the statistics window and opening a new main game window.
+     * This provides the user with a fresh game session.
+     *
+     * @param event The action event triggered by the button.
+     */
     @FXML
     void playAgain(ActionEvent event) {
-        principalWindow.close();
-        window.close();
-        PrincipalWindow newPrincipalWindow;
-        try {
-            newPrincipalWindow = new PrincipalWindow();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        // Cierra la ventana actual de estadísticas
+        if (window != null) {
+            window.close();
         }
-        newPrincipalWindow.show();
 
+        // Cierra la ventana principal existente
+        if (principalWindow != null) {
+            principalWindow.close();
+        }
+
+        // Abre una nueva instancia de la ventana principal para reiniciar el juego
+        try {
+            PrincipalWindow newPrincipalWindow = new PrincipalWindow();
+            newPrincipalWindow.show();
+        } catch (IOException e) {
+            throw new RuntimeException("Error al abrir la nueva ventana principal", e);
+        }
     }
-
-
 
 
     @FXML
     Button closeWindow;
+
+    /**
+     * Handles the action of closing the statistics window and the main game window.
+     * This method is called when the user wants to exit the game completely.
+     *
+     * @param event The action event triggered by the button.
+     */
     @FXML
-    private void closeWindow(ActionEvent event) {
+     void closeWindow(ActionEvent event) {
         if (window != null) {
             window.close();
         }
-        principalWindow.close();
+        if (principalWindow != null) {
+            principalWindow.close();
+        }
     }
-
-
 }

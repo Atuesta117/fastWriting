@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 /**
  * Controller for the start window.
  * This class handles the user actions on the initial screen, such as
@@ -38,17 +39,24 @@ public class StartController {
         this.startWindow = startWindow;
     }
 
+    /**
+     * Initializes the controller after the FXML has been loaded.
+     * This method is called automatically and can be used for initial setup tasks.
+     * At the moment, it doesn't perform any actions.
+     */
     @FXML
     private void initialize() {
         // Method called when the FXML is loaded.
     }
 
+    @FXML
+    Button startButon;
     /**
      * Handles the action of the "Start" button.
      * It closes the current start window and opens the main game window ({@link PrincipalWindow}).
+     *
+     * @param event The action event triggered by the button.
      */
-    @FXML
-    Button startButon;
     @FXML
     private void handleStartButton(ActionEvent event) {
         try {
@@ -76,8 +84,15 @@ public class StartController {
 
     @FXML
     private Button closeWindow;
+
+    /**
+     * Handles the action of the "Close" button.
+     * This method closes the current start window.
+     *
+     * @param event The action event triggered by the button.
+     */
     @FXML
     void closeWindow(ActionEvent event) {
-            startWindow.close();
+        startWindow.close();
     }
 }

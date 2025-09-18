@@ -6,6 +6,7 @@ import com.fastwriting.view.PrincipalWindow;
 import com.fastwriting.view.StartWindow;
 import com.fastwriting.view.StatisticsWindow;
 import javafx.animation.KeyValue;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.input.KeyCode;
@@ -36,20 +37,13 @@ public class Controller {
     @FXML
     private PrincipalWindow principalWindow;
 
-    /**
-     * Sets the reference to the {@link PrincipalWindow} this controller manages.
-     *
-     * @param principalWindow The {@code PrincipalWindow} instance.
-     */
-    public void setPrincipalWindow(PrincipalWindow principalWindow) {
-        this.principalWindow = principalWindow;
-    }
+
 
     private GameModel gameModel = new GameModel();
     private Phrases phrases = new Phrases();
     private StatisticsWindow statisticsWindow;
     private String userInput;
-    private boolean inputIsCorrect = true;
+
 
     @FXML
     private Label labelLevel;
@@ -70,10 +64,49 @@ public class Controller {
     private ImageView imageValidator;
 
     @FXML
-    ProgressBar progressBar;
+    private ProgressBar progressBar;
 
     @FXML
     Button closeGame;
+
+    /**
+     * Sets the reference to the {@link PrincipalWindow} this controller manages.
+     *
+     * @param principalWindow The {@code PrincipalWindow} instance.
+     */
+    public void setPrincipalWindow(PrincipalWindow principalWindow) {
+        this.principalWindow = principalWindow;
+    }
+
+    /**
+     * An internal class that have helpers functions
+     *
+     */
+    public class HelpersFunctions {
+        /**
+         * Retrieves and displays a new random phrase on the screen and displays the actual level that the user is
+         */
+        public void printLabels() {
+            String phrase = phrases.getPhrase(gameModel.getLevel());
+            labelPhrases.setText(phrase);
+            int level = gameModel.getLevel();
+            labelLevel.setText("Level: " + level);
+        }
+        /**
+         * Displays the statistics window at the end of the game.
+         * It creates a new {@link StatisticsWindow} and shows it to the user.
+         */
+        public void showStatistics() {
+            try {
+                statisticsWindow = new StatisticsWindow(gameModel, principalWindow);
+                statisticsWindow.show();
+            } catch (IOException e) {
+                System.err.println("Error opening statistic window: " + e.getMessage());
+            }
+        }
+    }
+
+    HelpersFunctions helpers = new HelpersFunctions();
 
 
 
@@ -84,41 +117,14 @@ public class Controller {
      */
     @FXML
     private void initialize() {
-        printLevel();
-        printPhrase();
+
+        helpers.printLabels();
         startTimer();
-        gameModel.startGame();
 
     }
 
-    /**
-     * Displays the statistics window at the end of the game.
-     * It creates a new {@link StatisticsWindow} and shows it to the user.
-     */
-    void mostrarEstadisticas() {
-        try {
-            StatisticsWindow statsWindow = new StatisticsWindow(gameModel, principalWindow);
-            statsWindow.show();
-        } catch (IOException e) {
-            System.err.println("Error opening statistic window: " + e.getMessage());
-        }
-    }
 
-    /**
-     * Retrieves and displays a new random phrase on the screen.
-     */
-    void printPhrase() {
-        String phrase = phrases.getPhrase(gameModel.getLevel());
-        labelPhrases.setText(phrase);
-    }
 
-    /**
-     * Updates the level label on the screen with the current game level.
-     */
-    void printLevel() {
-        int level = gameModel.getLevel();
-        labelLevel.setText("Level: " + Integer.toString(level));
-    }
 
     /**
      * Handles the action when the user presses Enter on the input field.
@@ -144,16 +150,13 @@ public class Controller {
             startTimer();
             labelMessage.setText("      ¡That's correct! 🎉 ");
             labelMessage.setStyle("-fx-text-fill: #3ed0c6; ");
-            inputIsCorrect = true;
-            System.out.println(inputIsCorrect);
-            printPhrase();
-            printLevel();
+
+           helpers.printLabels();
         } else {
             labelMessage.setText("   You fail 😕 try again");
             labelMessage.setStyle("-fx-text-fill: #ff0000;");
-            inputIsCorrect = false;
             gameModel.countFailures();
-            System.out.println(inputIsCorrect);
+
         }
     }
 
@@ -178,8 +181,10 @@ public class Controller {
     private Timeline timeline;
 
     /**
-     * Starts or restarts the game timer.
-     * It sets a countdown and handles the game over logic when the time runs out.
+     * Starts or restarts the game timer and the progress bar animation.
+     * It retrieves the total time from the game model, sets up a timeline for the progress bar animation,
+     * and a separate timeline for the second-by-second countdown logic. It handles the game over
+     * conditions for both time running out and the player winning.
      */
     @FXML
     private void startTimer() {
@@ -201,21 +206,21 @@ public class Controller {
 
                     if (actualTime == 0) {
 
-                        gameModel.setIsPlaying(false);
+
                         timeline.stop();
                         progressBarTimeLine.stop();
                         myTimer.setText("0");
                         labelMessage.setText("Time is OUT, GAME OVER");
                         myInput.setDisable(true);
-                        mostrarEstadisticas();
+                        helpers.showStatistics();
                     } else if (gameModel.getPlayerIsWin()) {
 
-                        gameModel.setIsPlaying(false);
+
                         timeline.stop();
                         progressBarTimeLine.stop();
                         labelMessage.setText("YOU WIN, GAME OVER");
                         myInput.setDisable(true);
-                        mostrarEstadisticas();
+                        helpers.showStatistics();
                     }
                 })
         );
@@ -224,17 +229,26 @@ public class Controller {
     }
 
     /**
-     * Stops the game timer.
+     * Stops the main game countdown timer.
+     * This method is typically called when the game ends, either by the user
+     * completing the phrase or by the timer running out.
      */
+
     private void stopTImer() {
         timeline.stop();
 
     }
 
+    /**
+     * Closes the main game window when the corresponding button is clicked.
+     *
+     * @param event The action event triggered by the button.
+     */
     @FXML
     void closeGame(ActionEvent event) {
         principalWindow.close();
     }
+
 
 
 }

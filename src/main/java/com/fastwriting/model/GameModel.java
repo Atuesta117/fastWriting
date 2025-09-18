@@ -4,11 +4,10 @@ package com.fastwriting.model;
  * The model class representing the state of the typing game.
  * It manages game logic such as the current level, time, player's score, and game status.
  */
-public class GameModel implements IGameInterface {
+public class GameModel extends GameModelAdapter {
     private int level;
     private int time;
-    private boolean isPlaying;
-    private Phrases phrases = new Phrases();
+    private final Phrases phrases;
     private int failures;
     private int success;
     private int remainingTime;
@@ -20,9 +19,8 @@ public class GameModel implements IGameInterface {
      */
     public GameModel() {
         this.level = 1;
-        this.isPlaying = false;
+
         this.phrases = new Phrases();
-        isPlaying = true;
         time = 20;
         this.failures = 0;
         this.success = 0;
@@ -42,14 +40,6 @@ public class GameModel implements IGameInterface {
     }
 
     /**
-     * Starts the game session by setting the game status to playing.
-     */
-    @Override
-    public void startGame() {
-        isPlaying = true;
-    }
-
-    /**
      * Advances the game to the next level.
      * It increments the level and the success count. Every 5 levels, it decreases the available time by 2 seconds.
      */
@@ -62,25 +52,6 @@ public class GameModel implements IGameInterface {
         }
     }
 
-    /**
-     * Gets the current playing status of the game.
-     *
-     * @return {@code true} if the game is currently running, {@code false} otherwise.
-     */
-    @Override
-    public boolean getIsPlaying() {
-        return isPlaying;
-    }
-
-    /**
-     * Sets the playing status of the game.
-     *
-     * @param isPlaying A boolean value to set the game's playing state.
-     */
-    @Override
-    public void setIsPlaying(boolean isPlaying) {
-        this.isPlaying = isPlaying;
-    }
 
     /**
      * Gets the current level of the game.

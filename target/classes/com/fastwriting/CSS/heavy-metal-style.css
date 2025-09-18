@@ -1,7 +1,7 @@
 /* Estilos para el Pane (fondo) */
 #rootPane {
     -fx-background-color: #1a1a1a; /* Un gris muy oscuro */
-    -fx-background-image: url('../metal_texture1.png'); /* Usamos la textura JPG de metal o roca agrietada para el fondo */
+    -fx-background-image: url('../metal_texture2.png'); /* Usamos la textura JPG de metal o roca agrietada para el fondo */
     -fx-background-size: cover; /* Ajusta la imagen para cubrir el fondo */
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
