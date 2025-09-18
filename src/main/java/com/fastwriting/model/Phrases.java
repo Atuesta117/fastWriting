@@ -10,75 +10,57 @@ import java.util.Random;
  */
 public class Phrases {
 
-    // Level 1-5: Basic words (3-4 letters)
-    private List<String> level1 = Arrays.asList("cat", "dog", "sun", "pen", "book", "car", "hat", "ball", "fish", "bird");
-    private List<String> level2 = Arrays.asList("home", "tree", "door", "cake", "rain", "star", "moon", "ship", "foot", "hand");
-    private List<String> level3 = Arrays.asList("apple", "table", "chair", "water", "paper", "music", "clock", "plant", "cloud", "bread");
-    private List<String> level4 = Arrays.asList("mother", "father", "sister", "brother", "family", "garden", "window", "orange", "yellow", "purple");
-    private List<String> level5 = Arrays.asList("school", "friend", "teacher", "student", "pencil", "ruler", "eraser", "notebook", "backpack", "crayon");
+    private static final List<String> level1 = Arrays.asList("hello", "world", "write", "code", "game");
+    private static final List<String> level2 = Arrays.asList("quick", "brown", "jumps", "power", "train");
+    private static final List<String> level3 = Arrays.asList("speed", "light", "right", "wrong", "words");
+    private static final List<String> level4 = Arrays.asList("learn", "about", "thing", "other", "start");
+    private static final List<String> level5 = Arrays.asList("Jump", "Beyond", "Cloud", "Above", "Below");
+    private static final List<String> level6 = Arrays.asList("Follow", "Leader", "Expert", "Mentor", "Tutor");
+    private static final List<String> level7 = Arrays.asList("Program", "Develop", "Build", "Create", "Design");
+    private static final List<String> level8 = Arrays.asList("Systems", "Network", "Online", "Secure", "Protect");
+    private static final List<String> level9 = Arrays.asList("Digital", "Assets", "Server", "Client", "Protocol");
+    private static final List<String> level10 = Arrays.asList("Compute", "Analyze", "Process", "Record", "Report");
+    private static final List<String> level11 = Arrays.asList("Complex", "Simple", "Elegant", "Robust", "Agile");
+    private static final List<String> level12 = Arrays.asList("Project", "Feature", "Module", "Method", "Function");
+    private static final List<String> level13 = Arrays.asList("Science", "Theory", "Logic", "Maths", "Model");
+    private static final List<String> level14 = Arrays.asList("Source", "Target", "Syntax", "Error", "Input");
+    private static final List<String> level15 = Arrays.asList("Output", "Debug", "Solve", "Issue", "Problem");
+    private static final List<String> level16 = Arrays.asList("Deploy", "Release", "Manage", "Update", "Install");
+    private static final List<String> level17 = Arrays.asList("Access", "Securely", "Verify", "Validate", "Action");
+    private static final List<String> level18 = Arrays.asList("Database", "Schema", "Query", "Insert", "Select");
+    private static final List<String> level19 = Arrays.asList("Interface", "Layout", "Visual", "Element", "Design");
+    private static final List<String> level20 = Arrays.asList("Learning modern languages.", "Programming complex systems.", "Designing user interfaces.");
+    private static final List<String> level21 = Arrays.asList("Debugging software issues.", "Writing clean code.", "Managing development projects.");
+    private static final List<String> level22 = Arrays.asList("Implementing efficient algorithms.", "Securing network protocols.", "Building scalable applications.");
+    private static final List<String> level23 = Arrays.asList("Understanding data structures.", "Refactoring legacy code.", "Optimizing system performance.");
+    private static final List<String> level24 = Arrays.asList("Exploring cybersecurity threats.", "Developing mobile apps.", "Crafting elegant solutions.");
+    private static final List<String> level25 = Arrays.asList("Architecting software solutions.", "Analyzing big data.", "Ensuring code quality.");
+    private static final List<String> level26 = Arrays.asList("Using version control.", "Collaborating on projects.", "Testing new features.");
+    private static final List<String> level27 = Arrays.asList("Managing cloud services.", "Integrating external APIs.", "Creating automated tests.");
+    private static final List<String> level28 = Arrays.asList("Troubleshooting network connectivity.", "Developing machine learning models.", "Applying design patterns.");
+    private static final List<String> level29 = Arrays.asList("Mastering new frameworks.", "Writing technical documentation.", "Maintaining existing systems.");
+    private static final List<String> level30 = Arrays.asList("Automating deployment pipelines.", "Conducting code reviews.", "Improving application security.");
+    private static final List<String> level31 = Arrays.asList("Applying the principles of software engineering.", "Learning how to write better code.", "Working with various types of data structures.");
+    private static final List<String> level32 = Arrays.asList("Developing a scalable and secure application.", "Debugging an incredibly complex software issue.", "Mastering new and emerging programming languages.");
+    private static final List<String> level33 = Arrays.asList("Optimizing the performance of our database.", "Refactoring the entire legacy codebase.", "Building a powerful distributed computing system.");
+    private static final List<String> level34 = Arrays.asList("Implementing efficient cryptographic security protocols.", "Designing a new microservices architecture.", "Analyzing massive datasets for valuable insights.");
+    private static final List<String> level35 = Arrays.asList("Maintaining continuous integration and deployment.", "Collaborating effectively with multiple teams.", "Automating the software testing process completely.");
+    private static final List<String> level36 = Arrays.asList("Troubleshooting a very difficult network problem.", "Creating sophisticated machine learning algorithms.", "Applying advanced design patterns in practice.");
+    private static final List<String> level37 = Arrays.asList("Migrating all services to the cloud.", "Integrating with various third-party APIs.", "Writing high-quality technical documentation.");
+    private static final List<String> level38 = Arrays.asList("Ensuring the scalability of our architecture.", "Performing detailed security audits regularly.", "Conducting thorough and effective code reviews.");
+    private static final List<String> level39 = Arrays.asList("He is a professional cybersecurity analyst.", "The new software update is incredible.", "He sings with so much passion.", "This beautiful landscape is breathtaking.", "The team won the championship.");
+    private static final List<String> level40 = Arrays.asList("He is a full-stack developer.", "He is a full stack web developer.", "I am testing the new payment gateway.");
+    private static final List<String> level41 = Arrays.asList("He is an excellent problem-solving genius.", "The distributed systems are incredibly powerful.", "The system is scaling very well now.", "I am using a new version control system.", "The authentication system is very robust.");
+    private static final List<String> level42 = Arrays.asList("The recursive function call is very elegant.", "The asynchronous execution model is very efficient.", "I am analyzing the low-level system performance.", "She is a highly skilled database administrator.", "The new API endpoint is very responsive.");
+    private static final List<String> level43 = Arrays.asList("We have to deploy the new application now.", "The compiler optimization techniques are fascinating.", "The memory management is a critical task.", "He is writing a highly concurrent program.", "I am studying the advanced networking protocols.");
+    private static final List<String> level44 = Arrays.asList("The system architecture design is critically important.", "I am a specialized blockchain technology developer.", "He is an expert in quantum computing applications.", "The computational complexity theory is fascinating.", "The distributed ledger technology is very complex.");
+    private static final List<String> level45 = Arrays.asList("The cryptographic hash function is fundamental to security.", "We are going to improve our system reliability.", "The big data processing pipeline is very efficient.", "He is an expert in machine learning algorithms.", "The cloud native development approach is very popular.");
+    private static final List<String> level46 = Arrays.asList("The functional programming paradigm is very useful.", "We need to optimize the database query performance.", "The parallel computing paradigm is very important.", "I am studying the advanced operating system concepts.", "He is designing a new distributed file system.");
+    private static final List<String> level47 = Arrays.asList("The advanced concurrent data structures are complex.", "We have to implement a secure cryptographic protocol.", "The system's fault tolerance is very important.", "I am analyzing the network packet flow.", "He is an expert in designing microprocessors.");
+    private static final List<String> level48 = Arrays.asList("The compiler design and optimization is incredible.", "We are developing a new artificial intelligence model.", "The real-time operating systems are very efficient.", "I am a certified network security professional.", "He is using a complex genetic algorithm.");
+    private static final List<String> level49 = Arrays.asList("The computer vision applications are becoming commonplace.", "The deep learning neural networks are very powerful.", "I am a skilled embedded systems programmer.", "He is designing a new high-performance computing cluster.", "The quantum mechanics are a challenging subject.");
+    private static final List<String> level50 = Arrays.asList("The advanced cybersecurity defenses are incredibly complex.", "I am an expert in software reverse engineering.", "The theoretical computer science is a passion.", "He is a leader in blockchain technology.", "The internet of things is evolving rapidly.");
 
-    // Level 6-10: Common verbs and adjectives
-    private List<String> level6 = Arrays.asList("running", "jumping", "eating", "sleeping", "drinking", "reading", "writing", "drawing", "singing", "dancing");
-    private List<String> level7 = Arrays.asList("happy", "sad", "angry", "tired", "hungry", "thirsty", "excited", "scared", "brave", "kind");
-    private List<String> level8 = Arrays.asList("beautiful", "wonderful", "excellent", "fantastic", "amazing", "brilliant", "magnificent", "splendid", "gorgeous", "marvelous");
-    private List<String> level9 = Arrays.asList("quickly", "slowly", "quietly", "loudly", "happily", "sadly", "angrily", "carefully", "easily", "brightly");
-    private List<String> level10 = Arrays.asList("understand", "remember", "discover", "imagine", "create", "explore", "develop", "improve", "practice", "learn");
-
-    // Level 11-15: Nature and environment
-    private List<String> level11 = Arrays.asList("mountain", "forest", "river", "ocean", "desert", "island", "valley", "waterfall", "volcano", "canyon");
-    private List<String> level12 = Arrays.asList("weather", "climate", "temperature", "humidity", "precipitation", "atmosphere", "environment", "ecosystem", "biodiversity", "conservation");
-    private List<String> level13 = Arrays.asList("elephant", "kangaroo", "crocodile", "butterfly", "dolphin", "penguin", "gorilla", "octopus", "rhinoceros", "chameleon");
-    private List<String> level14 = Arrays.asList("sunflower", "dandelion", "carnation", "lavender", "daffodil", "tulip", "orchid", "cactus", "bamboo", "sequoia");
-    private List<String> level15 = Arrays.asList("hurricane", "tornado", "earthquake", "tsunami", "avalanche", "drought", "flood", "wildfire", "blizzard", "monsoon");
-
-    // Level 16-20: Science and technology
-    private List<String> level16 = Arrays.asList("computer", "keyboard", "monitor", "software", "hardware", "internet", "website", "database", "algorithm", "network");
-    private List<String> level17 = Arrays.asList("chemistry", "physics", "biology", "astronomy", "geology", "mathematics", "psychology", "sociology", "archaeology", "anthropology");
-    private List<String> level18 = Arrays.asList("microscope", "telescope", "laboratory", "experiment", "research", "discovery", "invention", "innovation", "technology", "engineering");
-    private List<String> level19 = Arrays.asList("electricity", "magnetism", "gravity", "radiation", "particle", "molecule", "atom", "electron", "proton", "neutron");
-    private List<String> level20 = Arrays.asList("artificial", "intelligence", "robotics", "automation", "programming", "cybersecurity", "blockchain", "virtual", "reality", "augmented");
-
-    // Level 21-25: Professions and occupations
-    private List<String> level21 = Arrays.asList("doctor", "nurse", "teacher", "engineer", "scientist", "artist", "musician", "writer", "actor", "director");
-    private List<String> level22 = Arrays.asList("architect", "accountant", "lawyer", "judge", "policeman", "fireman", "soldier", "pilot", "captain", "chef");
-    private List<String> level23 = Arrays.asList("journalist", "reporter", "photographer", "designer", "programmer", "analyst", "manager", "executive", "consultant", "therapist");
-    private List<String> level24 = Arrays.asList("astronaut", "biologist", "chemist", "physicist", "mathematician", "psychologist", "sociologist", "economist", "historian", "philosopher");
-    private List<String> level25 = Arrays.asList("entrepreneur", "businessman", "investor", "banker", "stockbroker", "realestate", "insurance", "marketing", "advertising", "publicrelations");
-
-    // Level 26-30: Advanced adjectives
-    private List<String> level26 = Arrays.asList("mysterious", "fascinating", "intriguing", "captivating", "enchanting", "mesmerizing", "breathtaking", "astonishing", "stunning", "remarkable");
-    private List<String> level27 = Arrays.asList("complicated", "sophisticated", "intricate", "elaborate", "complex", "challenging", "demanding", "difficult", "arduous", "formidable");
-    private List<String> level28 = Arrays.asList("enthusiastic", "passionate", "dedicated", "committed", "determined", "persistent", "resilient", "tenacious", "unwavering", "steadfast");
-    private List<String> level29 = Arrays.asList("ambiguous", "equivocal", "vague", "obscure", "cryptic", "enigmatic", "perplexing", "puzzling", "bewildering", "confusing");
-    private List<String> level30 = Arrays.asList("magnanimous", "benevolent", "philanthropic", "altruistic", "compassionate", "empathetic", "sympathetic", "charitable", "generous", "kindhearted");
-
-    // Level 31-35: Academic and formal vocabulary
-    private List<String> level31 = Arrays.asList("analysis", "synthesis", "evaluation", "interpretation", "explanation", "description", "comparison", "contrast", "classification", "categorization");
-    private List<String> level32 = Arrays.asList("hypothesis", "theory", "concept", "principle", "doctrine", "paradigm", "framework", "model", "structure", "system");
-    private List<String> level33 = Arrays.asList("methodology", "procedure", "technique", "approach", "strategy", "tactic", "method", "process", "operation", "implementation");
-    private List<String> level34 = Arrays.asList("significance", "importance", "relevance", "implication", "consequence", "result", "outcome", "effect", "impact", "influence");
-    private List<String> level35 = Arrays.asList("controversial", "debated", "disputed", "contentious", "polemical", "argumentative", "divisive", "provocative", "inflammatory", "sensitive");
-
-    // Level 36-40: Business and economics
-    private List<String> level36 = Arrays.asList("investment", "capital", "revenue", "profit", "loss", "expense", "budget", "finance", "economy", "market");
-    private List<String> level37 = Arrays.asList("competition", "monopoly", "oligopoly", "industry", "sector", "enterprise", "corporation", "company", "firm", "organization");
-    private List<String> level38 = Arrays.asList("globalization", "international", "multinational", "transnational", "export", "import", "trade", "commerce", "business", "transaction");
-    private List<String> level39 = Arrays.asList("innovation", "creativity", "invention", "patent", "copyright", "trademark", "brand", "logo", "slogan", "marketing");
-    private List<String> level40 = Arrays.asList("leadership", "management", "administration", "supervision", "direction", "guidance", "mentorship", "coaching", "training", "development");
-
-    // Level 41-45: Medical and health terms
-    private List<String> level41 = Arrays.asList("medicine", "surgery", "treatment", "therapy", "rehabilitation", "recovery", "healing", "wellness", "health", "fitness");
-    private List<String> level42 = Arrays.asList("diagnosis", "prognosis", "symptom", "syndrome", "condition", "disease", "illness", "disorder", "infection", "inflammation");
-    private List<String> level43 = Arrays.asList("cardiovascular", "respiratory", "digestive", "nervous", "muscular", "skeletal", "endocrine", "immune", "reproductive", "integumentary");
-    private List<String> level44 = Arrays.asList("pharmacy", "prescription", "medication", "vaccine", "antibiotic", "antiviral", "antifungal", "antiseptic", "analgesic", "anesthetic");
-    private List<String> level45 = Arrays.asList("epidemiology", "pathology", "pharmacology", "toxicology", "genetics", "genomics", "proteomics", "biotechnology", "bioinformatics", "nanotechnology");
-
-    // Level 46-50: Very advanced vocabulary
-    private List<String> level46 = Arrays.asList("philosophical", "theoretical", "conceptual", "abstract", "metaphysical", "existential", "epistemological", "ontological", "phenomenological", "hermeneutical");
-    private List<String> level47 = Arrays.asList("revolutionary", "transformative", "innovative", "groundbreaking", "pioneering", "trailblazing", "visionary", "futuristic", "progressive", "advanced");
-    private List<String> level48 = Arrays.asList("sustainability", "environmental", "ecological", "conservation", "preservation", "protection", "restoration", "renewable", "recyclable", "biodegradable");
-    private List<String> level49 = Arrays.asList("psychological", "psychiatric", "neurological", "cognitive", "behavioral", "emotional", "mental", "intellectual", "rational", "logical");
-    private List<String> level50 = Arrays.asList("multidisciplinary", "interdisciplinary", "crossdisciplinary", "transdisciplinary", "comprehensive", "holistic", "integrated", "unified", "synthesized", "coordinated");
 
     /**
      * Retrieves a random phrase from the specified level.

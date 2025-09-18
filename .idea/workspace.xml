@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/RulesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/RulesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/model/GameModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/model/GameModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/Phrases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/Phrases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/model/Phrases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/model/Phrases.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/PrincipalWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/PrincipalWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/RulesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/RulesView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StartWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StartWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StatisticsWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StatisticsWindow.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +72,7 @@
       <workItem from="1758117542848" duration="370000" />
       <workItem from="1758133111780" duration="1886000" />
       <workItem from="1758156274546" duration="224000" />
+      <workItem from="1758161755471" duration="743000" />
     </task>
     <servers />
   </component>
