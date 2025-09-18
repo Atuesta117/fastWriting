@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/Phrases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/model/Phrases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/model/Phrases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/model/Phrases.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <workItem from="1758117542848" duration="370000" />
       <workItem from="1758133111780" duration="1886000" />
       <workItem from="1758156274546" duration="224000" />
-      <workItem from="1758161755471" duration="743000" />
+      <workItem from="1758161755471" duration="1308000" />
     </task>
     <servers />
   </component>

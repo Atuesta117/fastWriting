@@ -178,7 +178,6 @@ public class Controller {
 
         if (key == KeyCode.ENTER) {
             validateInput();
-            myInput.clear();
         }
     }
 
