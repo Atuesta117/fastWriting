@@ -43,6 +43,7 @@ public class Controller {
     private StatisticsWindow statisticsWindow;
     private StartWindow startWindow;
     private String userInput;
+    private Boolean inputIsValid;
 
 
     @FXML
@@ -172,12 +173,14 @@ public class Controller {
             startTimer();
             labelMessage.setText("      ¡That's correct! 🎉 ");
             labelMessage.setStyle("-fx-text-fill: #3ed0c6; ");
+            inputIsValid = true;
 
            helpers.printLabels();
         } else {
             labelMessage.setText("   You fail 😕 try again");
             labelMessage.setStyle("-fx-text-fill: #ff0000;");
             gameModel.countFailures();
+            inputIsValid = false;
 
         }
     }
@@ -228,14 +231,22 @@ public class Controller {
 
                     if (actualTime == 0) {
 
+                        this.userInput= myInput.getText();
+                        myInput.clear();
+                        validateInput();
+                        if(inputIsValid){
+                            gameModel.levelUp();
+                        }
+                        else{
+                            timeline.stop();
+                            progressBarTimeLine.stop();
+                            myTimer.setText("0");
+                            labelMessage.setText("Time is OUT, GAME OVER");
+                            myInput.setDisable(true);
+                            principalWindow.close();
+                            helpers.showStatistics();
+                        }
 
-                        timeline.stop();
-                        progressBarTimeLine.stop();
-                        myTimer.setText("0");
-                        labelMessage.setText("Time is OUT, GAME OVER");
-                        myInput.setDisable(true);
-                        principalWindow.close();
-                        helpers.showStatistics();
                     } else if (gameModel.getPlayerIsWin()) {
 
 
