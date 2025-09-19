@@ -60,3 +60,45 @@
     -fx-font-size: 14px;
 
 }
+
+#back {
+    -fx-background-color: #000000; /* Fondo negro */
+    -fx-text-fill: #FF0000; /* Texto en rojo */
+    -fx-border-color: #FF4500; /* Borde rojo para que destaque */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Efectos al pasar el cursor y al presionar el botón */
+#back:hover {
+    -fx-background-color: #330000;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+#back:pressed {
+    -fx-background-color: #550000;
+}
+
+#playAgain {
+    -fx-background-color: #000000; /* Fondo negro */
+    -fx-text-fill: #FF0000; /* Texto en rojo */
+    -fx-border-color: #FF4500; /* Borde rojo para que destaque */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Efectos al pasar el cursor y al presionar el botón */
+#playAgain:hover {
+    -fx-background-color: #330000;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+#playAgain:pressed {
+    -fx-background-color: #550000;
+}

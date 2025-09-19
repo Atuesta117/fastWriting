@@ -28,7 +28,7 @@ public class StartWindow extends Stage {
         FXMLLoader loader = new FXMLLoader(
                 StartWindow.class.getResource("/com/fastwriting/startWindow.fxml")
         );
-
+        this.initStyle(javafx.stage.StageStyle.UNDECORATED);
         Parent root = loader.load();
         Scene scene = new Scene(root);
 

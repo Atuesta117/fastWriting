@@ -32,6 +32,7 @@
                     </font></Label>
                 <ProgressBar fx:id="progressBar" layoutX="351.0" layoutY="443.0" prefHeight="20.0" prefWidth="282.0" progress="0.0" />
                 <Button fx:id="closeGame" layoutX="39.0" layoutY="476.0" mnemonicParsing="false" onAction="#closeGame" styleClass="heavy-metal-button" stylesheets="@CSS/statistic.css" text="EXIT" />
+            <Button fx:id="back" alignment="CENTER" layoutX="112.0" layoutY="476.0" minWidth="53.0" mnemonicParsing="false" onAction="#back" prefHeight="32.0" prefWidth="73.0" styleClass="heavy-metal-button" stylesheets="@CSS/statistic.css" text="BACK" />
             </children>
         </Pane>
     </children>

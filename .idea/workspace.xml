@@ -4,7 +4,79 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="" />
+    <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/class-use/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/class-use/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/Controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/RulesController.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/RulesController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/StartController.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/StartController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/StatisticsController.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/StatisticsController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/Controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/RulesController.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/RulesController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/StartController.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/StartController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/StatisticsController.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/class-use/StatisticsController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/controler/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/GameModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/GameModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/IGameInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/IGameInterface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/Phrases.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/Phrases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/class-use/GameModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/class-use/GameModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/class-use/IGameInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/class-use/IGameInterface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/class-use/Phrases.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/class-use/Phrases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/model/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/PrincipalWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/PrincipalWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/RulesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/RulesView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/StartWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/StartWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/StatisticsWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/StatisticsWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/PrincipalWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/PrincipalWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/RulesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/RulesView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/StartWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/StartWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/StatisticsWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/class-use/StatisticsWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/com/fastwriting/view/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/com.fastwriting/module-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/com.fastwriting/module-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/PrincipalWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/PrincipalWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/RulesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/RulesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StartWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StatisticsWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/view/StatisticsWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/statistic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/CSS/statistic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/fastwriting/gameView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/fastwriting/gameView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/CSS/statistic.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/CSS/statistic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller$HelpersFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller$HelpersFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/StatisticsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/gameView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/gameView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/startWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/startWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/PrincipalWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/PrincipalWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/RulesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/RulesView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StartWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StartWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StatisticsWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/view/StatisticsWindow.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +170,8 @@
       <workItem from="1758208840072" duration="6485000" />
       <workItem from="1758217268401" duration="822000" />
       <workItem from="1758218116508" duration="131000" />
-      <workItem from="1758229818140" duration="3428000" />
+      <workItem from="1758229818140" duration="7245000" />
+      <workItem from="1758237179062" duration="5520000" />
     </task>
     <servers />
   </component>

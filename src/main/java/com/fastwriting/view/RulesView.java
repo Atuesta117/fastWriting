@@ -27,6 +27,7 @@ public class RulesView extends Stage {
         FXMLLoader loader = new FXMLLoader(
                 StartWindow.class.getResource("/com/fastwriting/RulesView.fxml")
         );
+        this.initStyle(javafx.stage.StageStyle.UNDECORATED);
         Parent root = loader.load();
         Scene scene = new Scene(root);
         this.setScene(scene);

@@ -20,8 +20,7 @@ import java.io.IOException;
 public class StatisticsController {
     @FXML
     private StatisticsWindow window;
-    @FXML
-    private PrincipalWindow principalWindow;
+
 
     /**
      * Sets the reference to the {@link StatisticsWindow} this controller manages.
@@ -32,15 +31,7 @@ public class StatisticsController {
         this.window = window;
     }
 
-    /**
-     * Sets the reference to the {@link PrincipalWindow}, which allows this controller
-     * to manage the main game window (e.g., to close it or restart the game).
-     *
-     * @param principalWindow The {@code PrincipalWindow} instance.
-     */
-    public void setPrincipalWindow(PrincipalWindow principalWindow) {
-        this.principalWindow = principalWindow;
-    }
+
 
     /**
      * Initializes the controller after the FXML has been loaded.
@@ -104,10 +95,6 @@ public class StatisticsController {
             window.close();
         }
 
-        // Cierra la ventana principal existente
-        if (principalWindow != null) {
-            principalWindow.close();
-        }
 
         // Abre una nueva instancia de la ventana principal para reiniciar el juego
         try {
@@ -133,8 +120,6 @@ public class StatisticsController {
         if (window != null) {
             window.close();
         }
-        if (principalWindow != null) {
-            principalWindow.close();
-        }
+
     }
 }

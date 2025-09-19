@@ -17,7 +17,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.image.Image;
@@ -42,6 +41,7 @@ public class Controller {
     private GameModel gameModel = new GameModel();
     private Phrases phrases = new Phrases();
     private StatisticsWindow statisticsWindow;
+    private StartWindow startWindow;
     private String userInput;
 
 
@@ -68,6 +68,9 @@ public class Controller {
 
     @FXML
     Button closeGame;
+    @FXML
+    Button back;
+    boolean theUserIsBack;
 
     /**
      * Sets the reference to the {@link PrincipalWindow} this controller manages.
@@ -78,6 +81,20 @@ public class Controller {
         this.principalWindow = principalWindow;
     }
 
+    /**
+     * This back to the start window, if the player do, theUserIsBack will be true
+     */
+    @FXML
+    void back(ActionEvent event) {
+        principalWindow.close();
+        try {
+            startWindow = new StartWindow();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        startWindow.show();
+        theUserIsBack = true;
+    }
     /**
      * An internal class that have helpers functions
      *
@@ -95,15 +112,20 @@ public class Controller {
         /**
          * Displays the statistics window at the end of the game.
          * It creates a new {@link StatisticsWindow} and shows it to the user.
+         * if the player plays back, to do not show the statistic window, we validated that the user is not back
          */
         public void showStatistics() {
-            try {
-                statisticsWindow = new StatisticsWindow(gameModel, principalWindow);
+            if(!theUserIsBack){
+                try {
+                     statisticsWindow = new StatisticsWindow(gameModel, principalWindow);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 statisticsWindow.show();
-            } catch (IOException e) {
-                System.err.println("Error opening statistic window: " + e.getMessage());
             }
+
         }
+
     }
 
     HelpersFunctions helpers = new HelpersFunctions();
@@ -120,7 +142,7 @@ public class Controller {
 
         helpers.printLabels();
         startTimer();
-
+        theUserIsBack = false;
     }
 
 
@@ -212,6 +234,7 @@ public class Controller {
                         myTimer.setText("0");
                         labelMessage.setText("Time is OUT, GAME OVER");
                         myInput.setDisable(true);
+                        principalWindow.close();
                         helpers.showStatistics();
                     } else if (gameModel.getPlayerIsWin()) {
 
@@ -220,6 +243,7 @@ public class Controller {
                         progressBarTimeLine.stop();
                         labelMessage.setText("YOU WIN, GAME OVER");
                         myInput.setDisable(true);
+                        principalWindow.close();
                         helpers.showStatistics();
                     }
                 })

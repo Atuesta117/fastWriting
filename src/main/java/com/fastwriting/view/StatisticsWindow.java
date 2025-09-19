@@ -38,11 +38,10 @@ public class StatisticsWindow extends Stage {
             Parent root = loader.load();
             StatisticsController controller = loader.getController();
             controller.setStatisticWindow(this);
-            controller.setPrincipalWindow(principalWindow);
 
 
             controller.showStatistics(gameModel);
-
+            this.initStyle(javafx.stage.StageStyle.UNDECORATED);
 
             Scene scene = new Scene(root);
             this.setScene(scene);

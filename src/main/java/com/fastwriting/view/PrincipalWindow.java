@@ -31,7 +31,7 @@ public class PrincipalWindow extends Stage {
         );
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
-
+        this.initStyle(javafx.stage.StageStyle.UNDECORATED);
         this.setScene(scene);
         this.setTitle("FastWriting");
         this.setResizable(false); // this is for dont resize
