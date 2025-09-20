@@ -234,10 +234,7 @@ public class Controller {
                         this.userInput= myInput.getText();
                         myInput.clear();
                         validateInput();
-                        if(inputIsValid){
-                            gameModel.levelUp();
-                        }
-                        else{
+                        if(!inputIsValid){
                             timeline.stop();
                             progressBarTimeLine.stop();
                             myTimer.setText("0");
@@ -246,6 +243,7 @@ public class Controller {
                             principalWindow.close();
                             helpers.showStatistics();
                         }
+
 
                     } else if (gameModel.getPlayerIsWin()) {
 

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="681f58ab-b635-468f-a7d8-ff034fd92ab6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastwriting/controler/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller$HelpersFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller$HelpersFunctions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fastwriting/controler/Controller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +54,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/juan-jose/Documentos/Codigos/Universidad/Tercer Semestre/fastWriting",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,6 +113,8 @@
       <workItem from="1758229818140" duration="7245000" />
       <workItem from="1758237179062" duration="6344000" />
       <workItem from="1758303796157" duration="1397000" />
+      <workItem from="1758340555285" duration="85000" />
+      <workItem from="1758340661231" duration="918000" />
     </task>
     <servers />
   </component>
